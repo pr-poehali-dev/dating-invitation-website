@@ -92,3 +92,48 @@
 .card-shadow {
   box-shadow: 0 10px 25px rgba(126, 105, 171, 0.1);
 }
+
+.border-deep-purple {
+  border-color: #9b87f5;
+  border-width: 2px;
+}
+
+.floating-hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  bottom: -10%;
+  will-change: transform;
+  animation: float-up 15s linear infinite;
+  opacity: 0.6;
+  color: #FFDEE2;
+}
+
+.heart:nth-child(2n) {
+  color: #E5DEFF;
+}
+
+.heart:nth-child(3n) {
+  color: #9b87f5;
+  opacity: 0.3;
+}
+
+@keyframes float-up {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(-1500%) rotate(360deg);
+    opacity: 0;
+  }
+}
